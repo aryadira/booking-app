@@ -20,7 +20,7 @@ const ImagesSection = () => {
   };
 
   return (
-    <div className='w-full lg:max-w-[50%]'>
+    <div>
       <h2 className='text-2xl font-bold mb-3'>Images</h2>
       <div className='border rounded p-4 flex flex-col gap-4'>
         {existingImageUrls && (
@@ -30,7 +30,7 @@ const ImagesSection = () => {
                 <img src={url} className='min-h-full object-cover' />
                 <button
                   onClick={(event) => handleDelete(event, url)}
-                  className='absolute inset-0 flex items-center justify-center bg-blue bg-opacity-50 opacity-0 group-hover:opacity-100 text-white'>
+                  className='w-full absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 text-white'>
                   Delete
                 </button>
               </div>

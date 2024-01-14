@@ -61,17 +61,21 @@ const DetailSection = () => {
         />
         {errors.pricePerNight && <span className='text-red-500'>{errors.pricePerNight.message}</span>}
       </label>
-      <label className='text-gray-700 text-sm font-bold flex-1'>
-        Price Per Night
+      <label className='bg-white text-gray-700 text-sm font-bold flex-1'>
+        Star Rating
         <select
-          className='bg-white border rounded w-full py-2 px-3 font-normal my-2'
-          {...register("pricePerNight", { required: "This field is required" })}>
-          <option value=''>Select as Rating</option>
+          {...register("starRating", {
+            required: "This field is required",
+          })}
+          className='border rounded w-full p-2 text-gray-700 font-normal'>
+          <option value='' className='text-sm font-bold'>
+            Select as Rating
+          </option>
           {[1, 2, 3, 4, 5].map((num) => (
             <option value={num}>{num}</option>
           ))}
         </select>
-        {errors.pricePerNight && <span className='text-red-500'>{errors.pricePerNight.message}</span>}
+        {errors.starRating && <span className='text-red-500'>{errors.starRating.message}</span>}
       </label>
     </div>
   );

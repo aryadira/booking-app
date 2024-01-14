@@ -14,10 +14,10 @@ const Header = () => {
         <span className='flex space-x-2'>
           {isLoggedIn ? (
             <span className='text-md flex text-slate-300 font-bold items-center gap-2 tracking-tight'>
-              <Link to='/bookings' className='hover:bg-blue-700 focus:bg-blue-800 hover:text-white py-2 px-3 rounded-sm'>
+              <Link to='/booking' className='hover:bg-blue-700 focus:text-white focus:bg-blue-700 hover:text-white py-2 px-3 rounded-sm'>
                 My Bookings
               </Link>
-              <Link to='/hotels' className='hover:bg-blue-700 focus:bg-blue-800 hover:text-white py-2 px-3 rounded-sm'>
+              <Link to='/hotel/me' className='hover:bg-blue-700 focus:text-white focus:bg-blue-700 hover:text-white py-2 px-3 rounded-sm'>
                 My Hotels
               </Link>
               <SignOutButton />

@@ -37,6 +37,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/hotels", hotelRoutes);
 
+app.get("*", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
+});
+
 app.listen(2703, () => {
   console.log(`Server running on port:2703...`);
 });
